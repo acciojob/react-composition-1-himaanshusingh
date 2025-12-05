@@ -10,7 +10,6 @@ const App = () => {
 
   return (
     <div>
-      <h1>Tabs Demo</h1>
       <Tabs tabs={tabsData} />
     </div>
   );
