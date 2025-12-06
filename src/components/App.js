@@ -9,9 +9,7 @@ const App = () => {
   ];
 
   return (
-    <div>
-      <Tabs tabs={tabsData} />
-    </div>
+    <div><Tabs tabs={tabsData} /></div> // prettier-ignore
   );
 };
 
