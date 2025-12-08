@@ -7,16 +7,12 @@ const Tabs = ({ tabs }) => {
     <div className="tabs-container">
       <ul className="tabs">
         {tabs.map((tab, index) => (
-          <li
-            key={index}
-            className={activeTab === index ? "active" : ""}
-            onClick={() => setActiveTab(index)}
-          >
+          <li key={index} onClick={() => setActiveTab(index)}>
             {tab.title}
           </li>
         ))}
       </ul>
-      <div className="tab-content">{tabs[activeTab]?.content || ""}</div>
+      <p className="tab-content">{tabs[activeTab].content}</p>
     </div>
   );
 };
