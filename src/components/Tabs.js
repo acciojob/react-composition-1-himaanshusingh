@@ -7,20 +7,12 @@ const Tabs = ({ tabs }) => {
     <div className="tabs-container">
       <ul className="tabs">
         {tabs.map((tab, index) => (
-          <li
-            key={index}
-            className={activeTab === index ? "active" : ""}
-            onClick={() => setActiveTab(index)}
-          >
-            {tab.title}
-          </li>
+          <li key={index} className={activeTab === index ? "active" : ""} onClick={() => setActiveTab(index)}>{tab.title}</li>
         ))}
       </ul>
-      <div className="tab-content">
-        {tabs[activeTab] && tabs[activeTab].content}
-      </div>
-    </div>
-  );
+      <div className="tab-content">{tabs[activeTab] && tabs[activeTab].content}</div>
+    </div> 
+  ); // prettier-ignore
 };
 
 export default Tabs;
